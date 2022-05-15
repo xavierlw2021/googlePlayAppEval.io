@@ -1,9 +1,7 @@
 from PyQt5.QtWidgets import QMainWindow
-
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time, csv
-
 from UI import Ui_MainWindow
 
 class MainWindow_controller(QMainWindow):
@@ -24,8 +22,7 @@ class MainWindow_controller(QMainWindow):
         ua = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
         option.add_argument("user-agent={}".format(ua)) #使用偽裝header進入網站
 
-        driver_path= r'E:/chromedriver.exe'  #webdriver檔案
-        
+        driver_path= r'E:/chromedriver.exe'  #webdriver檔案        
         driver = webdriver.Chrome(driver_path, chrome_options=option)
         #設定driver變數為啟動webdriver，chrome_options=option是把瀏覽器於背景作業的參數加入
 
