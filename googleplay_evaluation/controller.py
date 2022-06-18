@@ -94,7 +94,7 @@ class MainWindow_controller(QMainWindow):
         eval_ele = driver.find_elements_by_xpath(evaluation_path)   #評價內文
         time.sleep(2)
         
-        print('資料寫入中...')
+        print('資料正在寫入...')
 
         path = "app_eval.csv"
         with open(path, 'w', newline='', encoding='utf-8') as f:    
